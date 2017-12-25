@@ -1,0 +1,43 @@
+{
+    "extends": "airbnb-base",
+    "rules": {
+        "indent": [2, 4, {"SwitchCase": 1}],
+        "linebreak-style": 0,
+        "no-use-before-define": [
+            "error",
+            {
+                "functions": false,
+                "classes": false
+            }
+        ],
+        "no-param-reassign": [2, {"props": false}],
+        "global-require": 1,
+        "no-debugger": "error",
+        "import/prefer-default-export": 0,
+        "no-unused-vars": ["error", { "argsIgnorePattern": "next" }],
+        "consistent-return": 0,
+        // Legacy
+        "max-len": [2, 150, 4, {"ignoreComments": true, "ignoreUrls": true}],
+        "max-params": [2, 5],
+        "no-bitwise": 2,
+
+        "no-unused-expressions": 1,
+        "camelcase": ["error", {"properties": "never"}]
+    },
+    "env": {
+        "browser": true,
+        "node": true,
+        "mocha": true,
+        "es6": true
+    },
+    "parser": "babel-eslint",
+    "plugins": [
+        "json"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "modules": true,
+            "experimentalObjectRestSpread": true
+        }
+    }
+}
