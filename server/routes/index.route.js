@@ -13,12 +13,12 @@ router.get('/health-check', (req, res) =>
     res.send('OK'));
 
 // mount user routes at /users
-router.use('/users', expressJwt({
-    secret: config.jwtSecret,
-}), userRoutes);
+router.use('/users', userRoutes);
 
 // mount user routes at /users
-router.use('/transactions', transactionsRoutes);
+router.use('/transactions', expressJwt({
+    secret: config.jwtSecret,
+}), transactionsRoutes);
 
 // mount auth routes at /auth
 router.use('/auth', authRoutes);

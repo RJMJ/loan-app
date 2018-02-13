@@ -20,6 +20,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.DATE,
             allowNull: false,
         },
+        password: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         updated_at: DataTypes.DATE,
         deleted_at: DataTypes.DATE,
     }, {
@@ -28,8 +32,6 @@ module.exports = (sequelize, DataTypes) => {
             associate: (models) => {
                 User.hasMany(models.Transaction, {
                     foreignKey: 'borrower_id',
-                    // constraints: false,
-                    // as: 'id',
                 });
             },
         },

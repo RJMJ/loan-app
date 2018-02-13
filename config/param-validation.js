@@ -5,6 +5,7 @@ export default {
     createUser: {
         body: {
             username: Joi.string().required(),
+            password: Joi.string().required(),
         },
     },
 
@@ -12,6 +13,7 @@ export default {
     updateUser: {
         body: {
             username: Joi.string().required(),
+            password: Joi.string().required(),
         },
         params: {
             userId: Joi.string().hex().required(),
@@ -20,6 +22,13 @@ export default {
 
     // POST /api/auth/login
     login: {
+        body: {
+            username: Joi.string().required(),
+            password: Joi.string().required(),
+        },
+    },
+
+    register: {
         body: {
             username: Joi.string().required(),
             password: Joi.string().required(),
