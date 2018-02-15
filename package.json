@@ -1,7 +1,7 @@
 {
     "name": "loan-app",
     "version": "0.1.0",
-    "description": "A Boilerplate application for building REST APIs",
+    "description": "An app to manage loans",
     "author": "Sergii plahuta",
     "main": "index.js",
     "engines": {
@@ -22,6 +22,10 @@
         "test:coverage": "cross-env NODE_ENV=test ./node_modules/.bin/istanbul cover _mocha -- --ui bdd --reporter spec --colors --compilers js:babel-core/register server/tests --recursive",
         "test:check-coverage": "yarn test:coverage && istanbul check-coverage",
         "report-coverage": "coveralls < ./coverage/lcov.info"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Sergepl1/loan-app"
     },
     "dependencies": {
         "bluebird": "3.4.6",
