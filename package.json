@@ -25,7 +25,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/Sergepl1/loan-app"
+        "url": "https://git.heroku.com/still-beyond-59613.git"
     },
     "dependencies": {
         "bluebird": "3.4.6",
